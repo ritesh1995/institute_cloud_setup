@@ -1,0 +1,55 @@
+yum install nfs-utils		#to install nfs service 
+vim /etc/exports		#to permit a user to your nfs
+systemctl enable nfs		#to start the nfs service automatically when system starts
+systemctl start nfs		#to start the nfs service when needed
+systemctl status nfs		#to check the status of the nfs
+
+fdisk -l					#to see your currently mounted disks
+mkfs.ext4 /dev/sda1				#have to format the hdd u want to create pv of
+pvcreate /dev/sda1				#here /dev/sda1 shows the harddisk you want to use
+vgcreate /dev/sda1 /dev/sda2 my			#to create vg of the two pv for nfs service can use more or less hdd
+vgcreate /dev/sda1 /dev/sda2 iassvg		#to create vg of the two pv for iass service can use more or less hdd
+lvcreate --name rites --size 100G  my		#to create lv for nfs
+lvcreate --name lv1 --size 100G  iassvg		#to create lv for iass
+mount /dev/iassvg/lv1 /lvmounts			#to mount the lv1 in lvmounts folder the folder have to be created
+						#mount can be permanently done through entry in /etc/fstab file
+
+yum innstall virt-manager.noarch  -y	#to install virt mamnager package
+yum install qemu-kvm libvirt libvirt-python libguestfs-tools virt-install -y		#to install other package related to bash
+
+vim /etc/selinux/config					# use this file to permanently disable the selinux security that might block the cloud service
+getenforce			#to check the value of selinux Permissive=off enforcing =on
+
+systemctl enable libvirtd		#to start the libvirtd service automatically when system starts
+systemctl start libvirtd		#to start the libvirtd service when needed
+systemctl status libvirtd		#to check the status of the libvirtd
+
+systemctl disable firewalld		#to stop the firewalld service automaticacll when system starts
+systemctl stop firewalld		#to stop firewall service when needed(firewall may block some ssh functions to work)
+systemctl status firewalld		#to check the status of firewall
+
+
+ifconfig				#to see all the available network adapters of the system
+
+#creating a bridge
+ifconfig ens33 0			#set the ip of primary network adapter (ens33) to 0
+ifconfig virbr0 0			#set the ip of virtual network adapter to 0
+
+
+brctl addif virbr0 ens33		#add a bridge between virtual and primary adapter
+brctl show				#to see the current bridge
+
+
+dhclient -v virbr0			#to assign new ip to the virtual adapter (needed to get internet in guest os)
+
+
+
+virt-install --network bridge:virbr0   --name centos7cli --os-variant=centos7.0 --ram=1024 --vcpu=1 --noautoconsole --graphics vnc,listen=0.0.0.0,port=5955  --check all=off --location=/CentOS-7-x86_64-DVD-1611.iso --disk path=/lvmounts/centos7cli,size=8
+
+					#to install a new os that can be later cloned for the user 
+
+virt-clone --original rhel73gui --name newguest --auto-clone #to clone a current guest os
+
+virsh list				#list the current os
+
+virsh vncdisplay guestname		#to retrive the vnc port of the gives guest name

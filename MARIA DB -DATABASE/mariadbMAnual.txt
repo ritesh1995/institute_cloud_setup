@@ -1,0 +1,77 @@
+Add repo in /etc/yum.repos.d/ named as mariadb.repo
+
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.2/rhel7-amd64
+#gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=0
+
+
+
+
+yum install MariaDB*
+systemctl start mysql
+
+systemctl status mysql 
+
+systemctl enable mariadb
+
+mysql_secure_installation
+
+
+	Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+	Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+	Set root password? [Y/n] y
+	New password: 
+	Re-enter new password: 
+	Password updated successfully!
+	Reloading privilege tables..
+ ... Success!
+
+
+
+  
+mysql -u root -p     //Press enter
+
+	Enter Password: 
+ 
+
+	show databases;
+
+	create database cloud;
+
+	use cloud;
+
+	show tables;
+
+	CREATE TABLE student (
+	email varchar(100) NOT NULL ,
+	user varchar(100) NOT NULL ,
+	pass varchar(100) NOT NULL,
+	authpass varchar(100) NOT NULL
+	PRIMARY KEY(email),	
+	);
+
+
+	#if you are interested in viewing any existing remote users, issue the following SQL statement on the mysql.user table:
+
+	SELECT User, Host FROM mysql.user;
+
+
+	#Creating different users with different priviledges;
+
+	GRANT INSERT,SELECT,UPDATE ON cloud.student TO 'student'@'192.168.43.23' IDENTIFIED BY 'password' WITH GRANT OPTION;
+
+	flush priviledges;
+
+
+
+
+#IP here is web server's IP address.
+
+
+
