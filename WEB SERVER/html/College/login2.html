@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/login2.css">
+		<link rel="stylesheet" href="css/mit.css">
+
+	</head>
+	<body>
+		<div id ="particles-js">
+
+
+<h1 class="mainh">Create New Password</h1>
+
+
+<div class="cont_centrar">
+
+  <div class="cont_login">
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+<div class="cont_ba_opcitiy">
+        
+        
+  <h2></h2>
+
+  
+  <p>You can use your AUTH password to genrate new password.</p>
+
+  <button class="btn_sign_up" onclick="cambiar_sign_up()">USE AUTH  PASSWORD</button>
+</div>
+  </div>
+       </div>
+
+    
+    <div class="cont_back_info">
+       <div class="cont_img_back_grey">
+       <img src="image/login.jpg" alt="" />
+       </div>
+       
+    </div>
+<div class="cont_forms" >
+    <div class="cont_img_back_">
+       <img src="image/login.jpg" />
+       </div>
+ <div class="cont_form_login">
+<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+   <h2>LOGIN</h2>
+
+ <input type="text" placeholder="Email" />
+<input type="password" placeholder="NEW Password" />
+<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+
+  </div>
+ <div class="cont_form_sign_up">
+<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a> 
+   
+     <h2>ENTER AUTH PASSWORD</h2>
+<form action="/scripts/forgot.py" method="POST">
+<input type="text" placeholder="Email" name="email" />
+<input type="text" placeholder="AUTH Password"   name="authpass"/>
+<input type="password" placeholder="New Password" name="newpass"/>
+<input type="password" placeholder="Confirm Password" name="confirmpass"/>
+<button class="btn_sign_up" onclick="cambiar_sign_up()">CHANGE PASSWORD</button>
+<form>
+  </div>
+
+    </div>
+    
+  </div>
+ </div>
+</div></div>
+		<script type="text/javascript" src="javascript/particles.js"></script>
+		<script type="text/javascript" src="javascript/app.js"></script>
+		<script type="text/javascript" src="javascript/login.js"></script>
+	</body>
+</html>

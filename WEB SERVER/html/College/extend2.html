@@ -1,0 +1,59 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/extend1.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/mit.css">
+
+</head>
+<body>
+
+<div id ="particles-js">
+
+<section id="content">
+  <h1 class="mainh">What is your storage requirement?</h1>
+  <div class="cube">
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="d"></div>
+    <div id="slider-range-min"></div>
+  </div>
+<form action="/scripts/extend2.py" >
+  <input type="text" id="amount" name="store" />
+        <button class="button">NEXT</button>
+    
+</form>
+  </section>
+<link  href="css/fon1.css" >
+
+<link  href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css" >
+
+<div id="pagegradient"></div>
+
+    
+<script type="text/javascript" src="javascript/jquery.min.js"></script>
+
+		<script type="text/javascript" src="javascript/particles.js"></script>
+		<script type="text/javascript" src="javascript/app.js"></script>
+
+<script type="text/javascript" src="javascript/jquery-ui.min.js"></script>
+<script> $(function() {
+    $( "#slider-range-min" ).slider({
+      range: "min",
+      value: 0,
+      min: 0,
+      max: 50,
+      slide: function( event, ui ) {
+        $( "#amount" ).val(   ui.value+" GB" );
+        
+        $(".a, .b, .c, .d").width(ui.value*2 +"%");
+      }
+    });
+    $(".ui-slider-handle").text("<>");
+    $( "#amount" ).val(  $( "#slider-range-min" ).slider( "value"+" GB"));
+  });
+
+</script>
+</div>
+</body>
+</html>

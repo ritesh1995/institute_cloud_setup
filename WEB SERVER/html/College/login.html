@@ -1,0 +1,81 @@
+<html>
+	<head>
+           <link rel="stylesheet" href="css/mit.css">
+		<link rel="stylesheet" href="css/login.css">
+	</head>
+	<body>
+		<div id ="particles-js">
+
+
+
+
+<h1 class="mainh">Login or SignUP</h1>
+<div class="cont_centrar">
+
+  <div class="cont_login">
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+<div class="cont_ba_opcitiy">
+        
+        <h2>LOGIN</h2>  
+  <p>Login using your E-mail and password.</p> 
+  <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+<a href="login2.html"><button class="btn_login" >FORGOT PASS</button></a>
+  </div>
+  </div>
+<div class="col_md_sign_up">
+<div class="cont_ba_opcitiy">
+  <h2>SIGN UP</h2>
+
+  
+  <p>Don't have an account?Sign up .</p>
+
+  <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+</div>
+  </div>
+       </div>
+
+    
+    <div class="cont_back_info">
+       <div class="cont_img_back_grey">
+       <img src="image/login.jpg" alt="" />
+       </div>
+       
+    </div>
+<div class="cont_forms" >
+    <div class="cont_img_back_">
+       <img src="image/login.jpg" alt="" />
+       </div>
+ <div class="cont_form_login">
+<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+   <h2>LOGIN</h2>
+<form action="/scripts/login.py" method="POST">
+ <input type="text" placeholder="Email" name="username" />
+<input type="password" placeholder="Password" name="password"/>
+<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+</form>
+  </div>
+  
+   <div class="cont_form_sign_up">
+<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+     <h2>SIGN UP</h2>
+<form action="/scripts/register.py" method="POST">
+<input type="text" placeholder="Email" name="email" />
+<input type="text" placeholder="User" name="user"/>
+<input type="password" placeholder="Password" name="pass"/>
+<input type="password" placeholder="Confirm Password" name="confirmpass"/>
+<input type="password" placeholder="Authorization Password" name="authpass"/>
+<button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+</form>
+  </div>
+
+    </div>
+    
+  </div>
+ </div>
+</div></div>
+		<script type="text/javascript" src="javascript/particles.js"></script>
+		<script type="text/javascript" src="javascript/app.js"></script>
+		<script type="text/javascript" src="javascript/login.js"></script>
+	</body>
+</html>
