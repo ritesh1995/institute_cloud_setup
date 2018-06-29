@@ -1,0 +1,35 @@
+auth.py
+
+Server IP and Server Pass is the IP password for system that is providing the hardware.
+
+IP and passwd is the IP and password of the system hosting the webserver.
+
+All these files=>
+
+download.py, extend.py,iaasdelete.py,iasstoggle.py,icreate.py,iuser.py,review.py,remove.py,service.py,size.py,upload.py
+
+serverIP and serverPass is the IP password for system that is providing the hardware.
+
+
+forgot.py
+
+in connection variable the
+
+host -> is IP of the system hosting the mariaDB database server
+
+user-> is the username of the users that are allowed to access the database remotely.Here a user student is created with password "cL0u)@Dm!n" to access remotely database named 'cloud'
+
+
+
+login.py
+
+same as forgot.py
+
+m.py
+
+It is actually a management page for storage 
+
+serverIP and serverPass is the IP password for system that is providing the hardware.
+
+
+   

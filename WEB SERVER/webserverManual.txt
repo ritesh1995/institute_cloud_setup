@@ -1,0 +1,53 @@
+#setenforce 0
+#iptables -F
+
+for bcrypt
+
+make repo file in /etc/yum.repos.d/ directory as bcrypt.repo
+
+#vim /etc/yum.repos.d/bcrypt.repo
+
+	[bcrypt]
+	name=bcrypt
+	baseurl=http://mirror.city-fan.org/ftp/contrib/yum-repo/fc15/x86_64/
+	gpgcheck=0
+
+make repo file in /etc/yum.repos.d/ directory as epel.repo
+
+#vim /etc/yum.repos.d/epel.repo
+
+	[epel]
+	name=epel
+	baseurl=https://dl.fedoraproject.org/pub/epel/7/x86_64/
+	gpgcheck=0
+
+
+
+#yum install net-tools httpd bcrypt mysql-connector-python -y
+
+#systemctl start httpd
+#systemctl enable httpd
+
+Copy the given cgi.conf file in /etc/httpd/conf.d/ directory to enable the document root and enable cgi scripting in webserver
+
+#systemctl restart httpd
+
+Copy the Whole web server folder in / directory of the web server Operating system.
+
+change the owner of every folder and file in web server folder to apache user using chmod command.
+
+#chown apache /College
+#chown apache index.html
+
+and so on...
+
+Make all the files present in script directory as executable using  
+
+#chmod +x login.py
+#chmod +x register.py
+
+...... and so on
+
+
+
+
