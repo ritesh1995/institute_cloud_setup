@@ -1,0 +1,98 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+
+header.hero {
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.6);
+  margin: 0 0 20px;
+}
+header.hero h1 {
+  font-size: 3em;
+  color: #555;
+  margin: 0 0 5px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 0 0 20px;
+}
+
+ul.cards {
+  display:inline;
+  margin: 0 auto 20%;
+  height: 300px;
+  list-style-type: none;
+  position: relative;
+  padding: 20% 0px;
+  cursor: pointer;
+z-index:999;
+top:10%;
+
+
+}
+ul.cards li.title {
+  margin: 0 0 20%;
+}
+ul.cards li.title h2 {
+  font-weight: 700;
+}
+ul.cards li.card {
+  background: #FFF;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  margin-top:20%;
+  -webkit-box-shadow: 1px 2px 2px 0 #aaa;
+          box-shadow: 1px 2px 2px 0 #aaa;
+  
+}
+ul.cards li.card img {
+  max-width: 100%;
+  height: auto;
+}
+ul.cards li.card div.content {
+  padding: 5px 10px;
+}
+ul.cards li.card.card-1 {
+ position:relative;
+float:left;
+margin-left:13%;
+margin-top:10%;
+
+}
+
+ul.cards li.card.card-2 {
+  position:relative;
+margin-left:13%;
+float:left;
+margin-top:10%;
+}
+ul.cards li.card.card-3 {
+  position:relative;
+float:left;
+margin-left:13%;
+margin-top:10%;
+
+}
+
+
+

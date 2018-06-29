@@ -1,0 +1,457 @@
+
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300);
+        body {
+			
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+			        }
+        
+        body a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        
+        
+        body .card {
+            margin: 30px;
+            margin-left:90px;
+            margin-right: 70px;
+		
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            width: 280px;
+            text-align: center;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+                      box-shadow: 0px 17px 46px -10px #777777;
+            height: 470px;
+            border-radius: 14px;
+
+		 position:relative;
+		float:left;
+		z-index:999;
+                top:30%;
+				        }
+        
+        body .card{
+            -webkit-animation: intro 1s 0.1s forwards;
+            animation: intro 1s 0.1s forwards;
+        }
+                body  .card {
+           background: -webkit-linear-gradient(45deg, #c96881 0%, #f7b695 100%);
+            background: -moz-linear-gradient(45deg, #c96881 0%, #f7b695 100%);}
+                
+        body  .card:hover .card_inner__header img {
+            left: -50px;
+            -webkit-transition: all 3.4s linear;
+            transition: all 3.4s linear;
+        }
+        
+        body  .card:hover .card_inner__cta button {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        
+       
+        
+        body .card: .card_inner__circle img {
+            top: 0px;
+            left: 0px;
+
+        }
+                        
+        body  .card:hover {
+            opacity: 1;
+        }
+        
+        body  .card_inner__circle {
+            overflow: hidden;
+            width: 50px;
+            position: absolute;
+            background: #F1F0ED;
+            z-index: 10000;
+            height: 50px;
+            border-radius: 100px;
+            left: 0;
+            box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.28);
+            right: 0;
+            margin: auto;
+            border: 4px solid white;
+            top: 85px;
+        }
+        
+        body  .card_inner__circle img {
+            height: 50px;
+            position: relative;
+            top: 0px;
+left:-4.6px;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+padding: 0px 0px;
+        }
+        
+        body  .card_inner__header {
+            height: 120px;
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
+            overflow: hidden;
+        }
+        
+        body .card_inner__header img {
+            width: 120%;
+            position: relative;
+            top: -30px;
+            left: 0;
+            -webkit-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+        }
+        
+        body  .card_inner__content {
+            padding: 20px;
+        }
+        
+        body  .card_inner__content .price {
+            color: white;
+            font-weight: 800;
+            font-size: 35px;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+        }
+        
+        body  .card_inner__content .text {
+           color: rgba(255, 255, 255, 0.6);
+            font-weight: 100;
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 25px;}
+        
+        body  .card_inner__content .title {
+            font-weight: 800;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.64);
+            margin-top: 20px;
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+        
+        body  .card_inner__cta {
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 200px;
+        }
+        
+        body  .card_inner__cta button {
+            padding: 16px;
+            box-shadow: 0px 0px 40px 4px #F76583, 0px 0px 0px 2px rgba(255, 255, 255, 0.19) inset;
+            width: 100%;
+            background: -webkit-linear-gradient(-90deg, #fe5e7d 0%, #e5375b 100%);
+            background: -moz-linear-gradient(-90deg, #fe5e7d 0%, #e5375b 100%);
+            border: none;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            color: white;
+            outline: none;
+            font-size: 20px;
+            border-radius: 6px;
+            -webkit-transform: scale(0.94);
+            transform: scale(0.94);
+            cursor: pointer;
+            -webkit-transition: box-shadow .3s, -webkit-transform .3s .1s;
+            transition: box-shadow .3s, -webkit-transform .3s .1s;
+            transition: box-shadow .3s, transform .3s .1s;
+            transition: box-shadow .3s, transform .3s .1s, -webkit-transform .3s .1s;
+        }
+        
+        body  .card_inner__cta button span {
+            text-shadow: 0px 4px 18px #BA3F57;
+        }
+        
+        body  .card_inner__cta button:hover {
+            box-shadow: 0px 0px 60px 8px #F76583, 0px 0px 0px 2px rgba(255, 255, 255, 0.19) inset;
+        }
+        
+        @-webkit-keyframes launch {
+            0% {
+                left: 1px;
+            }
+            25% {
+                top: -50px;
+                left: 1px;
+            }
+            50% {
+                left: -100px;
+            }
+            75% {
+                top: 100px;
+                -webkit-transform: rotate(40deg);
+                transform: rotate(40deg);
+            }
+            100% {
+                left: 1px;
+            }
+        }
+        
+        @keyframes launch {
+            0% {
+                left: 1px;
+            }
+            25% {
+                top: -50px;
+                left: 1px;
+            }
+            50% {
+                left: -100px;
+            }
+            75% {
+                top: 100px;
+                -webkit-transform: rotate(40deg);
+                transform: rotate(40deg);
+            }
+            100% {
+                left: 1px;
+            }
+        }
+        
+        @-webkit-keyframes fly {
+            0% {
+                left: 0px;
+            }
+            25% {
+                top: -50px;
+                left: 50px;
+            }
+            50% {
+                left: -130px;
+            }
+            75% {
+                top: 60px;
+            }
+            100% {
+                left: 0px;
+            }
+        }
+        
+        @keyframes fly {
+            0% {
+                left: 0px;
+            }
+            25% {
+                top: -50px;
+                left: 50px;
+            }
+            50% {
+                left: -130px;
+            }
+            75% {
+                top: 60px;
+            }
+            100% {
+                left: 0px;
+            }
+        }
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(720deg);
+                transform: rotate(720deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(720deg);
+                transform: rotate(720deg);
+            }
+        }
+        
+        @-webkit-keyframes intro {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            25% {
+                -webkit-transform: scale(1.06);
+                transform: scale(1.06);
+            }
+            50% {
+                -webkit-transform: scale(0.965);
+                transform: scale(0.965);
+            }
+            75% {
+                -webkit-transform: scale(1.02);
+                transform: scale(1.02);
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes intro {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            25% {
+                -webkit-transform: scale(1.06);
+                transform: scale(1.06);
+            }
+            50% {
+                -webkit-transform: scale(0.965);
+                transform: scale(0.965);
+            }
+            75% {
+                -webkit-transform: scale(1.02);
+                transform: scale(1.02);
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+    
+
+/*****************************************
+  upload button styles
+******************************************/
+
+
+.file-upload__label {
+  display: block;
+  padding: 1em 2em;
+  color: #fff;
+ background: #ff9966;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ cursor: pointer;
+  border-radius: .4em;
+  transition: background .3s;
+float:right;  
+  &:hover {
+     cursor: pointer;
+     background: #000;
+  }
+}
+    
+.file-upload__input {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1;
+    width:0;
+    height: 100%;
+    opacity: 0;
+float:right;
+}
+
+
+
+
+.labelc {
+  
+  border: 0px solid #EF5350;
+   border-radius: 50%;
+  cursor: pointer;
+  height: 70px;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  right:0%;
+bottom:0%;
+  width: 70px;
+margin-left:0px;
+margin-top:0px;
+}
+
+ .labelc:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+ input[type="checkbox"] {
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked +label  {
+  background-color:#AED581;
+  border-color: #66bb6a;
+}
+
+
+
+.btnn{
+
+background: #4e54c8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  border: 0px solid #ccc;
+   border-radius: 50%;
+  cursor: pointer;
+  
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  right:0%;
+bottom:0%;
+  width: 0px;
+height:0px;
+margin-left:0px;
+margin-top:0px;
+}
+
+.my {
+	position: relative;
+	display: inline-block;
+z-index:999;
+width:100%;
+
+}
+
+
+.file-upload2 {
+	position: relative;
+	display: inline-block;
+z-index:999;
+margin-top:20px;
+margin-right:50px;
+float:right;
+}
+
+.file-upload__label {
+  display: block;
+  padding: 0.5em 1em;
+  color: #fff;
+  background: #fc4a1a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: .4em;
+  transition: background .3s;
+  
+  &:hover {
+     cursor: pointer;
+     background: #000;
+  }
+}

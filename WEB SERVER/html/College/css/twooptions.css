@@ -1,0 +1,132 @@
+.cubic{
+font-family: times, serif;
+text-align:center;
+font-style: bold;
+margin:0px;
+font-size: 80%;
+}
+.cubicp{
+font-family: times, serif;
+font-size: 80%;
+text-align:center;
+}
+
+.img1{
+position:relative;
+top:0px;
+margin-top:0px;
+
+padding-top:0px;
+}
+body{
+font-family:"comic sans ms";
+font-size:20px;
+color: white;
+margin: 0 0;
+padding: 0 0;
+}
+.wrap {
+  margin-top: 10%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+
+
+            margin-left:25%;
+            
+position:relative;
+float:left;
+z-index:999;
+}
+.cube {
+  
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+
+}
+
+.cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10%;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-color: #000;
+  border: solid 1px #eeeeee;
+  color:white;
+
+}
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube {
+  animation: rotate 20s infinite linear;
+}
+
+.wrap:hover .front {
+  transform: translateZ(200px);
+}
+
+.wrap:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+.cube > div {
+  transition: transform 0.2s ease-in;
+}
+
+
